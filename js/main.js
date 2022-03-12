@@ -22,13 +22,13 @@ function redirect() {
 
     if (usernames[index] == studentID) //if the ID entered matches the ID with the highest similarity, then the user entered their ID correctly, and they can be diredected to their result
     {
-        window.location.href = "/results/" + studentID;
+        window.location.href = "https://marvil-exe.github.io/Foro-estudiantil-de-Debates-Test/results/" + studentID;
     }
     else if ((usernames[index] != studentID) && (max >= 75)) //if the user didn't enter their ID correctly, but there's an ID that is 75% or more similar, they can be redirected to their result if they decide to
     {
         document.querySelector('input').select()
             var div = document.createElement("div");
-            div.innerHTML = "<span class=\"closebtn\" >&times;</span>  <strong>Ups!</strong> La matricula que escribiste no está en nuestro sistema. Querrías decir <a href=\"/results/" + usernames[index] + "\">" + usernames[index] + "?</a>"; //<a href="/results/username">username</a>
+            div.innerHTML = "<span class=\"closebtn\" >&times;</span>  <strong>Ups!</strong> La matricula que escribiste no está en nuestro sistema. Querrías decir <a href=\"https://marvil-exe.github.io/Foro-estudiantil-de-Debates-Test/results/" + usernames[index] + "\">" + usernames[index] + "?</a>"; //<a href="/results/username">username</a>
             div.setAttribute("class", "alert")
             document.body.prepend(div);
 
