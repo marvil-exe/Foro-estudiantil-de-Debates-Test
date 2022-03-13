@@ -20,7 +20,7 @@ function redirect() {
     }
     var max = Math.max(...similarities) //get the value of the highest similarity
     var index = similarities.indexOf(max) //get the position of the highest similarity, which equals the position of the person whose ID is closest
-    console.log("similarities: " + similarities + "\nmax: " + max + "\nindex: index");
+    console.log("similarities: " + similarities + "\nmax: " + max + "\nindex: " + index);
 
 
     if (usernames[index] == studentID) //if the ID entered matches the ID with the highest similarity, then the user entered their ID correctly, and they can be diredected to their result
