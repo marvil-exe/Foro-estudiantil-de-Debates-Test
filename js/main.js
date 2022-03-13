@@ -9,7 +9,7 @@ function redirect() {
 
     const studentID = document.querySelector('input').value.replace(/[^a-z0-9]/gi, '').toUpperCase(); //get the string of text after the last / in the URL
 
-    $.getJSON('/results', data => {
+    $.getJSON('https://marvil-exe.github.io/Foro-estudiantil-de-Debates-Test/results/', data => {
         console.log(data); //["doc1.jpg", "doc2.jpg", "doc3.jpg"] 
     });
     var usernames = ["A01723738", "A01723546", "A01723803", "A01723810"]; //list of people on which we have content
