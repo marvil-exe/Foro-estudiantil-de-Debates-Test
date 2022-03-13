@@ -7,10 +7,12 @@ wage.addEventListener("keydown", function (e) {
 
 function redirect() {
 
-    console.log("redirect")
-
     const studentID = document.querySelector('input').value.replace(/[^a-z0-9]/gi, '').toUpperCase(); //get the string of text after the last / in the URL
-    var usernames = ["A01723738", "A01723546", "A01723803", "A01723810", "A01723804"]; //list of people on which we have content
+
+    var fs = require('fs');
+    var files = fs.readdirSync('/results/');
+    console.log(files);
+    var usernames = ["A01723738", "A01723546", "A01723803", "A01723810"]; //list of people on which we have content
     var similarities = []; //array of percentage of similarities between list of students and entered student
 
     for (let i = 0; i < usernames.length; i++) //for every student we have, run the similarity calculation, and push it to the similarities array
