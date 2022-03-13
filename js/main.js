@@ -7,8 +7,10 @@ wage.addEventListener("keydown", function (e) {
 
 function redirect() {
 
+    console.log("redirect")
+
     const studentID = document.querySelector('input').value.replace(/[^a-z0-9]/gi, '').toUpperCase(); //get the string of text after the last / in the URL
-    var usernames = ["A01723738", "A01723546", "A01723803", "A01723810"]; //list of people on which we have content
+    var usernames = ["A01723738", "A01723546", "A01723803", "A01723810", "A01723804"]; //list of people on which we have content
     var similarities = []; //array of percentage of similarities between list of students and entered student
 
     for (let i = 0; i < usernames.length; i++) //for every student we have, run the similarity calculation, and push it to the similarities array
@@ -18,6 +20,7 @@ function redirect() {
     }
     var max = Math.max(...similarities) //get the value of the highest similarity
     var index = similarities.indexOf(max) //get the position of the highest similarity, which equals the position of the person whose ID is closest
+    console.log("similarities: " + similarities + "\nmax: " + max + "\nindex: index");
 
 
     if (usernames[index] == studentID) //if the ID entered matches the ID with the highest similarity, then the user entered their ID correctly, and they can be diredected to their result
