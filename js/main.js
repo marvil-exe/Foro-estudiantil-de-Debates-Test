@@ -30,7 +30,7 @@ function redirect() {
     {
         document.querySelector('input').select()
             var div = document.createElement("div");
-            div.innerHTML = "<span class=\"closebtn\" >&times;</span>  <strong>Ups!</strong> La matricula que escribiste no está en nuestro sistema. Querrías decir <a href=\"https://marvil-exe.github.io/Foro-estudiantil-de-Debates-Test/results/" + usernames[index] + "\">" + usernames[index] + "?</a>";
+            div.innerHTML = "<span class=\"closebtn\" >&times;</span>  <strong>Ups!</strong> La matricula que escribiste no está en nuestro sistema. Querías decir <a href=\"https://marvil-exe.github.io/Foro-estudiantil-de-Debates-Test/results/" + usernames[index] + "\">" + usernames[index] + "?</a>";
             div.setAttribute("class", "alert")
             document.body.prepend(div);
 
